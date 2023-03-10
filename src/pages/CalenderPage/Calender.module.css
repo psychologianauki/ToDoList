@@ -4,3 +4,8 @@
 .calendarComponent {
   width: 100%;
 }
+.smalldives {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
