@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: blueviolet;
+  padding-bottom: 40px;
+}
+.main {
+  width: 100%;
+}
+
+input {
+  width: 70%;
+  height: 50px;
+  margin-top: 10px;
+  font-size: 2rem;
+}
+button {
+  margin-top: 20px;
+}

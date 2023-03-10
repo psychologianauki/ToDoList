@@ -8,6 +8,7 @@ import Calender from "./pages/CalenderPage/Calender";
 import HomePage from "./pages/HomePage/HomePage";
 import ToDoListPage from "./pages/ToDoListPage/ToDoListPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 function App() {
   let component;
   switch (window.location.pathname) {
@@ -26,6 +27,8 @@ function App() {
     case "/loginPage":
       component = <LoginPage />;
       break;
+    case "/registerPage":
+      component = <RegisterPage />;
   }
 
   return (
