@@ -15,6 +15,9 @@ export default function Navbar() {
         <li>
           <a href="/loginPage">Login/Register</a>
         </li>
+        <li>
+          <a href="/toDoListPage">working to doListPage</a>
+        </li>
       </ul>
     </nav>
   );

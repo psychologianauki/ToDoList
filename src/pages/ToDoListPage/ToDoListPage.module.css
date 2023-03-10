@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 90%;
+}
+.inputbutton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+.input {
+  width: 75%;
+  height: 95%;
+  border-radius: 10px;
+}
+.button {
+  width: 20%;
+  height: 100%;
+}
+.ToDoListElem {
+  font-size: 1.4rem;
+  background-color: black;
+}
