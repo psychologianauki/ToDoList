@@ -3,8 +3,8 @@ import "./style.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <a href="/">ToDoPage</a>
       <ul>
+        <a href="/">ToDoPage</a>
         <li>
           {" "}
           <a href="/calender"> Calender</a>

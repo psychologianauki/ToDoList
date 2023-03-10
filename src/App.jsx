@@ -3,9 +3,9 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Link, BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import About from "./pages/About";
-import Calender from "./pages/Calender";
-import HomePage from "./pages/HomePage";
+import About from "./pages/AboutPage/About";
+import Calender from "./pages/CalenderPage/Calender";
+import HomePage from "./pages/HomePage/HomePage";
 function App() {
   let component;
   switch (window.location.pathname) {
