@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        <a href="/">ToDoPage</a>
+        <a href="/">Home</a>
         <li>
           {" "}
           <a href="/calender"> Calender</a>
@@ -13,10 +13,10 @@ export default function Navbar() {
           <a href="/about">About</a>
         </li>
         <li>
-          <a href="/loginPage">Login/Register</a>
+          <a href="/toDoListPage">To Do List</a>
         </li>
         <li>
-          <a href="/toDoListPage">working to doListPage</a>
+          <a href="/loginPage">Login/Register</a>
         </li>
       </ul>
     </nav>

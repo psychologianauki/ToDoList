@@ -26,3 +26,8 @@
   font-size: 1.4rem;
   background-color: black;
 }
+.icons {
+  display: flex;
+  gap: "15px";
+  padding-right: 10px;
+}

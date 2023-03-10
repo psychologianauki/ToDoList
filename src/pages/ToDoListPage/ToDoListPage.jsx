@@ -21,7 +21,12 @@ export default function ToDoListPage() {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <h1>To do list to fulfill on day 10.03.2023</h1>
+        <h1>
+          To do list to fulfill{" "}
+          {
+            "(without saving data, login is not necessarly needed to use this page)"
+          }
+        </h1>
         <div className={styles.inputbutton}>
           <input
             className={styles.input}
@@ -41,6 +46,7 @@ export default function ToDoListPage() {
               className={styles.ToDoListElem}
               style={{
                 backgroundColor: "black",
+                display: "flex",
                 fontSize: "2.5rem",
                 gap: "20px",
                 borderRadius: "10px",
@@ -48,36 +54,38 @@ export default function ToDoListPage() {
                 textAlign: "left",
                 paddingLeft: "30px",
                 alignItems: "center",
-                display: "flex",
+                justifyContent: "space-between",
               }}
             >
               {index + 1}
               {".  "}
               {value}
-              <div
-                onClick={() => {
-                  if (selectedIndexes.includes(index)) {
-                    setSelectedIndexes(
-                      selectedIndexes.filter((i) => i !== index)
-                    );
-                  } else {
-                    setSelectedIndexes([...selectedIndexes, index]);
-                  }
-                }}
-              >
-                <Done
-                  fill={selectedIndexes.includes(index) ? "green" : "gray"}
-                  stroke={selectedIndexes.includes(index) ? "green" : "gray"}
-                />{" "}
-              </div>
-              <div
-                onClick={() => {
-                  const newArray = [...myArray];
-                  newArray.splice(index, 1);
-                  setMyArray(newArray);
-                }}
-              >
-                <Reject />
+              <div className={styles.icons}>
+                <div
+                  onClick={() => {
+                    if (selectedIndexes.includes(index)) {
+                      setSelectedIndexes(
+                        selectedIndexes.filter((i) => i !== index)
+                      );
+                    } else {
+                      setSelectedIndexes([...selectedIndexes, index]);
+                    }
+                  }}
+                >
+                  <Done
+                    fill={selectedIndexes.includes(index) ? "green" : "gray"}
+                    stroke={selectedIndexes.includes(index) ? "green" : "gray"}
+                  />{" "}
+                </div>
+                <div
+                  onClick={() => {
+                    const newArray = [...myArray];
+                    newArray.splice(index, 1);
+                    setMyArray(newArray);
+                  }}
+                >
+                  <Reject />
+                </div>
               </div>
             </div>
           ))}
