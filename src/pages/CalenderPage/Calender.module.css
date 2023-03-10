@@ -1,3 +1,6 @@
 .calender {
   background-color: aqua;
 }
+.calendarComponent {
+  width: 100%;
+}
