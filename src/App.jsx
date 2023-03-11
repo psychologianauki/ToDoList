@@ -22,7 +22,10 @@ function App() {
       component = <Calender />;
       break;
     case "/toDoListPage":
-      component = <ToDoListPage />;
+      component = (
+        <ToDoListPage text="To do list to fulfill without saving data, login is not necessarly needed to use this page" />
+      );
+
       break;
     case "/loginPage":
       component = <LoginPage />;
@@ -31,7 +34,9 @@ function App() {
       component = <RegisterPage />;
       break;
     default:
-      component = <ToDoListPage />;
+      component = (
+        <ToDoListPage text="To do list to fulfill, with saving data, you will be able to go back to it in any moment" />
+      );
       break;
   }
 
