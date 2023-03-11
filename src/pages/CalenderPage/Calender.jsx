@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Calender.module.css";
 import Calendar from "react-calendar";
 import { useState } from "react";
+
 export default function calendar() {
   const [month, setMonth] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
@@ -66,6 +67,9 @@ export default function calendar() {
             height: "80px",
             backgroundColor: "black",
             margin: "2px",
+          }}
+          onClick={() => {
+            window.location.href = `/calender/${dayOfMonth}`;
           }}
         >
           <div>{dayOfMonth}</div>

@@ -29,6 +29,10 @@ function App() {
       break;
     case "/registerPage":
       component = <RegisterPage />;
+      break;
+    default:
+      component = <ToDoListPage />;
+      break;
   }
 
   return (

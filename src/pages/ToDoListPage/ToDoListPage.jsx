@@ -4,7 +4,7 @@ import { useState } from "react";
 import Done from "../../assets/icons/done";
 import Reject from "../../assets/icons/Reject";
 
-export default function ToDoListPage() {
+export default function ToDoListPage(props) {
   const [myArray, setMyArray] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [color, setColor] = useState("gray");
@@ -21,12 +21,7 @@ export default function ToDoListPage() {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <h1>
-          To do list to fulfill{" "}
-          {
-            "(without saving data, login is not necessarly needed to use this page)"
-          }
-        </h1>
+        <h1>{props.text}</h1>
         <div className={styles.inputbutton}>
           <input
             className={styles.input}
