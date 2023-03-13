@@ -1,8 +1,8 @@
 import React from "react";
-
+import styles from "./About.module.css";
 export default function About() {
   return (
-    <div>
+    <div className={styles.about}>
       <h2>
         My name is Aleksy, I'm from Poland and thats my second project. I
         developed this project to practise javasript and react. I was able to

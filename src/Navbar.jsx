@@ -5,21 +5,26 @@ import { Link } from "react-router-dom";
 import Logout from "./assets/icons/Logout";
 import { useState } from "react";
 export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <nav className="navbar">
       <ul>
-        <a href="/">Home</a>
+        <a href="/" style={{ color: "white" }}>
+          Home
+        </a>
         <li>
           {" "}
-          <a href="/calender"> Calender</a>
+          <a href="/calender" style={{ color: "white" }}>
+            {" "}
+            Calender
+          </a>
         </li>
+
         <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/toDoListPage">To Do List</a>
+          <a href="/toDoListPage" style={{ color: "white" }}>
+            To Do List
+          </a>
         </li>
         {isLoggedIn === true ? (
           <div
@@ -37,7 +42,14 @@ export default function Navbar() {
           </div>
         ) : (
           <li>
-            <a href="/loginPage">Login/Register</a>
+            <a
+              href="/loginPage"
+              style={{
+                color: "white",
+              }}
+            >
+              Login/Register
+            </a>
           </li>
         )}
       </ul>

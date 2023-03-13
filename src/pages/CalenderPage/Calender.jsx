@@ -6,9 +6,9 @@ import { useState } from "react";
 export default function calendar() {
   const [month, setMonth] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
-  console.log(month);
-  console.log(year);
 
+  const today = new Date().getDate();
+  console.log(today);
   const SmallDivs = () => {
     const smallDivs = [];
 
@@ -43,7 +43,7 @@ export default function calendar() {
         <div
           key={`empty-${i}`}
           style={{
-            width: "13%",
+            width: "13.95%",
             height: "80px",
             backgroundColor: "black",
             margin: "2px",
@@ -63,9 +63,9 @@ export default function calendar() {
         <div
           key={`day-${i}`}
           style={{
-            width: "13%",
+            width: "13.95%",
             height: "80px",
-            backgroundColor: "black",
+            backgroundColor: today === i + 1 ? "rgb(29, 179, 238)" : "black",
             margin: "2px",
           }}
           onClick={() => {
@@ -87,9 +87,11 @@ export default function calendar() {
   };
 
   return (
-    <div className="app">
-      Calendar component
-      <SmallDivs />
+    <div className={styles.container}>
+      <h1>Pick a day and prepare to Do </h1>
+      <div className={styles.smalldivesclass}>
+        <SmallDivs />
+      </div>
     </div>
   );
 }

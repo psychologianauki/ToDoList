@@ -2,7 +2,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: blueviolet;
+  background-color: black;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  border-radius: 10px;
 }
 .main {
   width: 100%;

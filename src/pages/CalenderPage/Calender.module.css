@@ -4,8 +4,21 @@
 .calendarComponent {
   width: 100%;
 }
+.today {
+  background-color: red;
+}
 .smalldives {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+.container {
+  background: linear-gradient(rgba(27, 26, 26, 0.774), rgb(29, 179, 238));
+
+  border-radius: 8px;
+}
+.smalldivesclass {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
 }

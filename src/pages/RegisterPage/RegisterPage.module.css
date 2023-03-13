@@ -2,8 +2,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: rgb(96, 35, 153);
+  background-color: black;
   padding-bottom: 40px;
+  padding-top: 20px;
+  border-radius: 10px;
 }
 .main {
   width: 100%;
