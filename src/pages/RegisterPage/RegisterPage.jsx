@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./RegisterPage.module.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../../../config";
 export default function RegisterPage() {
   const [inputValue, setInputValue] = useState("");
@@ -9,6 +9,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [notSamePasswords, setNotSamePasswords] = useState(true);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const password = inputValue;
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -50,7 +51,7 @@ export default function RegisterPage() {
                   ? setNotSamePasswords(false)
                   : setNotSamePasswords(true);
               }
-              createUserWithEmailAndPassword(auth, email, inputValue)
+              createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                   // Signed in
                   const user = userCredential.user;
