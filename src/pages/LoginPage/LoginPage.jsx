@@ -13,7 +13,9 @@ export default function LoginPage() {
         </div>
         <h4>
           If you dont have account yet, you can register{" "}
-          <a href="/registerPage">here</a>
+          <a href="/registerPage" style={{ color: "black" }}>
+            here
+          </a>
         </h4>
       </div>
     </div>

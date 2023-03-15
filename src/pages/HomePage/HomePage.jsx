@@ -5,7 +5,6 @@ export default function HomePage() {
     <div
       className={styles.container}
       style={{
-        backgroundColor: "black",
         paddingBottom: "10px",
         paddingTop: "10px",
         borderRadius: "10px",

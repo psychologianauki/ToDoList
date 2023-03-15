@@ -43,10 +43,10 @@ export default function calendar() {
         <div
           key={`empty-${i}`}
           style={{
-            width: "13.95%",
+            width: "14.08%",
             height: "80px",
             backgroundColor: "black",
-            margin: "2px",
+            margin: "0.1%",
           }}
         >
           <div></div>
@@ -63,17 +63,22 @@ export default function calendar() {
         <div
           key={`day-${i}`}
           style={{
-            width: "13.95%",
+            width: "14.08%",
             height: "80px",
-            backgroundColor: today === i + 1 ? "rgb(29, 179, 238)" : "black",
-            margin: "2px",
+            backgroundColor: today === i + 1 ? "white" : "black",
+            color: today === i + 1 ? "black" : "white",
+            margin: "0.1%",
           }}
           onClick={() => {
             window.location.href = `/calender/${dayOfMonth}`;
           }}
         >
           <div>{dayOfMonth}</div>
-          <div>{dayOfWeek}</div>
+          <div>
+            {window.innerWidth < 500
+              ? { dayOfWeek }
+              : dayOfWeek[0] + dayOfWeek[1] + dayOfWeek[2]}
+          </div>
         </div>
       );
     }

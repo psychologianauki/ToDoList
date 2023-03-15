@@ -10,11 +10,13 @@
 .smalldives {
   width: 100%;
   display: flex;
+
   flex-wrap: wrap;
 }
 .container {
-  background: linear-gradient(rgba(27, 26, 26, 0.774), rgb(29, 179, 238));
-
+  /* background: linear-gradient(rgba(27, 26, 26, 0.774), rgb(29, 179, 238)); */
+  width: 100%;
+  background: transparent;
   border-radius: 8px;
 }
 .smalldivesclass {
