@@ -3,12 +3,15 @@ import { useState } from "react";
 import styles from "./RegisterPage.module.css";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../../../config";
+import db from "../../../config";
+import { doc, setDoc, updateDoc } from "@firebase/firestore";
 export default function RegisterPage() {
   const [inputValue, setInputValue] = useState("");
   const [inputValue2, setInputValue2] = useState("");
   const [email, setEmail] = useState("");
   const [notSamePasswords, setNotSamePasswords] = useState(true);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [dataEmail, setDataEmail] = useState("");
   const password = inputValue;
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -26,9 +29,13 @@ export default function RegisterPage() {
         // Signed in
         const user = userCredential.user;
         console.log(userCredential);
-        console.log(userCredential.user.email);
+        setDataEmail(userCredential.user.email);
+        setDoc(doc(db, "users", user.email), {
+          email: userCredential.user.email,
+        });
         // ...
       })
+
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
