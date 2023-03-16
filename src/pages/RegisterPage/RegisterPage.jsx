@@ -19,6 +19,23 @@ export default function RegisterPage() {
   const handleEmail = (event) => {
     setEmail(event.target.value);
   };
+
+  const registerUser = async () => {
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(userCredential);
+        console.log(userCredential.user.email);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -51,17 +68,7 @@ export default function RegisterPage() {
                   ? setNotSamePasswords(false)
                   : setNotSamePasswords(true);
               }
-              createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                  // Signed in
-                  const user = userCredential.user;
-                  // ...
-                })
-                .catch((error) => {
-                  const errorCode = error.code;
-                  const errorMessage = error.message;
-                  // ..
-                });
+              registerUser();
             }}
           >
             Register
