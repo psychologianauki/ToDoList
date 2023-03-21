@@ -12,6 +12,7 @@ export default function RegisterPage() {
   const [notSamePasswords, setNotSamePasswords] = useState(true);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [dataEmail, setDataEmail] = useState("");
+  const [userRegistered, setUserRegistered] = useState(false);
   const password = inputValue;
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -33,7 +34,7 @@ export default function RegisterPage() {
         setDoc(doc(db, "users", user.email), {
           email: userCredential.user.email,
         });
-        // ...
+        setUserRegistered(true);
       })
 
       .catch((error) => {
@@ -42,7 +43,7 @@ export default function RegisterPage() {
         // ..
       });
   };
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -78,7 +79,16 @@ export default function RegisterPage() {
               registerUser();
             }}
           >
-            Register
+            <a
+              href={
+                inputValue === inputValue2 && email.length !== 0
+                  ? "/calender"
+                  : "/registerPage"
+              }
+              style={{ color: "white" }}
+            >
+              Register
+            </a>
           </button>
         </div>
         {notSamePasswords === false ? (

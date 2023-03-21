@@ -93,7 +93,7 @@ export default function calendar() {
 
   return (
     <div className={styles.container}>
-      <h1>Pick a day and prepare to Do </h1>
+      <h1>Pick a day and prepare To Do </h1>
       <div className={styles.smalldivesclass}>
         <SmallDivs />
       </div>
